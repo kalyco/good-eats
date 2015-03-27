@@ -1,0 +1,6 @@
+<%= form_for [@restaurant, @review] do |f| %>
+  <%= f.label "Add your own review:" %>
+  <%= f.text_field :body %>
+  <%= f.submit "Review" %>
+  <%= f.hidden_field :restaurant_id, :value => @restaurant.id %>
+<% end %>
